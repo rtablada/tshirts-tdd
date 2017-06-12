@@ -1,1 +1,15 @@
-{{outlet}}
+<div class="section">
+  <div class="container">
+    <ul class="panel">
+      <li class="panel-heading">
+        <h2>Tshirts</h2>
+      </li>
+      {{#each model.data as |tshirt|}}
+        <li data-test-tshirt-list-item class="panel-block">
+          <span data-test-tshirt-name>{{tshirt.attributes.name}}</span>
+          <span data-test-tshirt-size>{{tshirt.attributes.size}}</span>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>
