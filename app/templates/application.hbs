@@ -14,17 +14,17 @@
   {{/bulma-nav-toggle}}
 
   {{#bulma-nav-right isMenu=true}}
-    <a class="nav-item" href="#">
+    {{#link-to "tshirt" class="nav-item" data-test-nav-link-tshirt=true}}
       T Shirts
-    </a>
+    {{/link-to}}
   {{/bulma-nav-right}}
 {{/bulma-nav}}
 
 {{#if toggleNav}}
   {{#bulma-panel isHiddenDesktop=true isHiddenTablet=true isHiddenWidescreen=true}}
-    <a class="light panel-block" href="#">
+    {{#link-to "tshirt" class="panel-block" data-test-nav-link-tshirt=true}}
       T Shirts
-    </a>
+    {{/link-to}}
   {{/bulma-panel}}
 {{/if}}
 

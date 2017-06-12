@@ -6,7 +6,10 @@ const Router = Ember.Router.extend({
   rootURL: config.rootURL,
 });
 
-Router.map(() => {
+Router.map(function () {
+  this.route('tshirt', {
+    path: 'tshirts',
+  }, () => {});
 });
 
 export default Router;
