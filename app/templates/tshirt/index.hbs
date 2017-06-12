@@ -4,12 +4,18 @@
       <li class="panel-heading">
         <h2>Tshirts</h2>
       </li>
-      {{#each model.data as |tshirt|}}
-        <li data-test-tshirt-list-item class="panel-block">
-          <span data-test-tshirt-name>{{tshirt.attributes.name}}</span>
-          <span data-test-tshirt-size>{{tshirt.attributes.size}}</span>
+      {{#each model as |tshirt|}}
+        <li data-test-tshirt-list-item="{{tshirt.id}}" class="panel-block">
+          <span data-test-tshirt-name="{{tshirt.id}}">{{tshirt.name}}</span>
+          <span data-test-tshirt-size="{{tshirt.id}}">{{tshirt.size}}</span>
         </li>
       {{/each}}
+
+      <li class="panel-block">
+        {{#link-to "tshirt.new" class="button is-primary is-fullwidth" data-test-link-tshirt-new=true}}
+          Add New Tshirt
+        {{/link-to}}
+      </li>
     </ul>
   </div>
 </div>

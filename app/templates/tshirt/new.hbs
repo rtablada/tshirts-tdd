@@ -1,0 +1,48 @@
+<div class="section">
+  <div class="container">
+    <form class="card is-fullwidth" onsubmit={{action "saveForm"}}>
+      <div class="card-content">
+        <p class="field">
+          <label class="label" for="tshirt-name">Name</label>
+          {{input id="tshirt-name" data-test-tshirt-name-input=true
+            name="tshirt-name" placeholder="Name" class="input"
+            value=model.name}}
+        </p>
+
+        <div class="field is-grouped">
+          <label for="tshirt-size" class="label">Size</label>
+          <div class="control">
+            <button type="button" class="button"
+              onclick={{action (mut model.size) "XS"}}
+              data-test-tshirt-size-xs>XS</button>
+
+            <button type="button" class="button"
+              onclick={{action (mut model.size) "S"}}
+              data-test-tshirt-size-s>S</button>
+
+            <button type="button" class="button"
+              onclick={{action (mut model.size) "M"}}
+              data-test-tshirt-size-m>M</button>
+
+            <button type="button" class="button"
+              onclick={{action (mut model.size) "L"}}
+              data-test-tshirt-size-l>L</button>
+
+            <button type="button" class="button"
+              onclick={{action (mut model.size) "XL"}}
+              data-test-tshirt-size-xl>XL</button>
+
+            <button type="button" class="button"
+              onclick={{action (mut model.size) "XXL"}}
+              data-test-tshirt-size-xxl>XXL</button>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="" class="label"></label>
+          <button data-test-tshirt-submit class="button is-fullwidth is-primary" type="submit">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
