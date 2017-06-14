@@ -1,0 +1,8 @@
+<ul>
+  {{#each model as |tshirt|}}
+    <li data-test-tshirt-item>
+      <span data-test-tshirt-text>{{tshirt.text}}</span>
+      <span data-test-tshirt-size>{{tshirt.size}}</span>
+    </li>
+  {{/each}}
+</ul>
