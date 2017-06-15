@@ -1,0 +1,13 @@
+<form class="card" onsubmit={{action "saveTshirt"}}>
+  {{input value=model.text data-test-input-text=true placeholder="Text"}}
+
+  <div class="control">
+    <button class="button" type="button" data-test-input-size="S" onclick={{action (mut model.size) "S"}}>S</button>
+    <button class="button" type="button" data-test-input-size="M" onclick={{action (mut model.size) "M"}}>M</button>
+    <button class="button" type="button" data-test-input-size="L" onclick={{action (mut model.size) "L"}}>L</button>
+    <button class="button" type="button" data-test-input-size="XL" onclick={{action (mut model.size) "XL"}}>XL</button>
+    <button class="button" type="button" data-test-input-size="XXL" onclick={{action (mut model.size) "XXL"}}>XXL</button>
+  </div>
+
+  <button class="button" type="submit" data-test-submit>Save</button>
+</form>

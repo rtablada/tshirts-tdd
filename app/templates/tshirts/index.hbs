@@ -1,8 +1,19 @@
-<ul>
-  {{#each model as |tshirt|}}
-    <li data-test-tshirt-item>
-      <span data-test-tshirt-text>{{tshirt.text}}</span>
-      <span data-test-tshirt-size>{{tshirt.size}}</span>
-    </li>
-  {{/each}}
-</ul>
+<div class="section">
+  <div class="container">
+    <ul class="panel">
+      <li class="panel-heading">Tshirts</li>
+      {{#each model as |tshirt|}}
+        <li class="panel-block" data-test-tshirt-item>
+          Size: <span data-test-tshirt-size>{{tshirt.size}}</span>
+          Text <span data-test-tshirt-text>{{tshirt.text}}</span>
+        </li>
+      {{/each}}
+
+      <li class="panel-block">
+        {{#link-to "tshirts.new" data-test-link-new=true class="button"}}
+          New Tshirt
+        {{/link-to}}
+      </li>
+    </ul>
+  </div>
+</div>
